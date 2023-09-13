@@ -1,0 +1,65 @@
+#gallery {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+/* это родитель */
+.photo {
+    overflow: hidden;
+/*    background: red;*/
+    height: 600px;
+    position: relative;
+/*    margin-bottom: 20px;*/
+}
+/* это дочерний элемент */
+.photo img {
+/*    display: none;*/
+    max-width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: 0.5s;
+    object-fit: cover;
+    height: 100%;
+}
+
+/* это активный слайд */
+.photo img.shown {
+    opacity: 1;
+/*    display: block;*/
+}
+
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    gap: 22px;
+}
+.tabs input {
+    cursor: pointer;
+    display: block;
+    padding: 20px;
+    background: #336d03;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    transition: 0.5s;
+    width: 100%;
+    max-width: 100px;
+}
+.tabs input:hover {
+    background: orange;
+}
+.tabs input.prev {
+    left: 10px;
+}
+.tabs input.next {
+    right: 10px;
+}
+
+

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Путь от Подольска калькулятор</title>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="assets/css/style.css"> -->
+
+</head>
+<body>
+    <style>
+        .calc {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-content: space-around;
+            align-items: flex-end;
+            }
+        .calc__fieldset {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .calc__label {
+            font-size: 20px;
+            margin-bottom: 5px;
+            display: block;
+            margin-right: 20px;
+        }
+        .calc__total {
+            font-size: 30px;
+        }
+        
+
+    </style>
+    <div class="calc">
+        <div class="calc__fieldset">
+            <label for="" class="calc__label">Кол-во пассажиров</label>
+            <input type="number" class="calc__inp" id="square" value="1" min="0" max="50" onchange="calculateCost();">
+        </div>
+        <div class="calc__fieldset">
+            <label for="" class="calc__label">Расход л\100км</label>
+            <input type="number" class="calc__inp" id="floor" value="3" min="0" max="300" onchange="calculateCost();">
+        </div>
+        <div class="calc__fieldset">
+            <label for="" class="calc__label">Пункт назначения</label>
+            <select name="" class="calc__inp" id="materialType" onchange="calculateCost();">
+                <option value="0">___</option>
+                <option value="1">Суздаль (205)</option>
+                <option value="2">Тверь (200)</option>
+                <option value="3">Пермь (1444)</option>
+                <option value="4">Екатеринбург (1830)</option>
+                <option value="5">Иркутск (5200)</option>
+                <option value="6">Краснодар (1333)</option>
+                <option value="7">Ленинград (720)</option>
+                <option value="8">Москва (41)</option>
+            </select> 
+        </div>
+
+        <div class="calc__fieldset">
+            <div class="calc__total">Цена топлива <span id="totalCost" style="font-weight:bold;">Х</span> руб</div>
+        </div>
+        <div class="calc__fieldset">
+            <div class="calc__sale">Выгода на чел. <span id="saleCost" style="font-weight:bold;">V</span> руб</div>
+        </div>
+
+        <div class="calc__fieldset">
+            <div class="calc__time">Время в пути <span id="timeCost" style="font-weight:bold;">T</span> час.</div>
+        </div>
+    </div>
+
+    <script src="assets/js/app.js"></script>
+
+</body>
+</html>
